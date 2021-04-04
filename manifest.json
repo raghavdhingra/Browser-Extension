@@ -1,0 +1,36 @@
+{
+  "short_name": "Diagnostics Extension",
+  "name": "Diagnostics Extension | By Raghav Dhingra",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "description": "Sample Diagnostics Application Extension for providing diagnostics stats to PWA application.",
+  "icons": {
+    "16": "./assets/images/chromium.png",
+    "32": "./assets/images/chromium.png",
+    "48": "./assets/images/chromium.png",
+    "64": "./assets/images/chromium.png",
+    "128": "./assets/images/chromium.png"
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://localhost/*",
+      "*://diagnostic-app.netlify.app/*",
+      "*://diagnostics.raghavdhingra.com/*"
+    ]
+  },
+  "action": {
+    "default_icon": "./assets/images/chromium.png",
+    "default_popup": "index.html",
+    "default_title": "Diagnostics Extension"
+  },
+  "background": {
+    "service_worker": "swScripts.js"
+  },
+  "permissions": [
+    "tabs",
+    "system.cpu",
+    "system.storage",
+    "system.memory",
+    "system.display"
+  ]
+}
