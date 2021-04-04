@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="./manifest.json" />
+    <title>Chrome Extension</title>
+    <link href="./main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="cpu-usage-container">
+      <div class="cpu-info-header">
+        <h3>CPU Information</h3>
+        <select id="select-timer">
+          <option value="1">1 second</option>
+          <option value="2">2 second</option>
+          <option value="3">3 second</option>
+          <option value="5">5 second</option>
+          <option value="10">10 second</option>
+          <option value="30">30 second</option>
+          <option value="60">60 second</option>
+        </select>
+      </div>
+      <table class="cpu-description-table">
+        <tbody>
+          <tr>
+            <td>Model</td>
+            <td id="model-name"></td>
+          </tr>
+
+          <tr>
+            <td>Architecture</td>
+            <td id="arch-name"></td>
+          </tr>
+
+          <tr>
+            <td>No. of Processors</td>
+            <td id="no-of-processors"></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="extension-hr"></div>
+      <h3>RAM Utilization</h3>
+      <table class="cpu-description-table">
+        <tbody>
+          <tr>
+            <td>Total Memory</td>
+            <td>Used</td>
+            <td>Free</td>
+          </tr>
+          <tr>
+            <td><span id="ram-memory-total"></span> GiB</td>
+            <td><span id="ram-memory-used"></span> GiB</td>
+            <td><span id="ram-memory-free"></span> GiB</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="extension-hr"></div>
+    </div>
+    <div class="help-btn" id="helpBtn">HELP</div>
+    <script src="./index.js"></script>
+  </body>
+</html>
